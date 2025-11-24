@@ -173,13 +173,14 @@
 			}
 		}
 
-		&-btn {
+		& &-btn {
 			padding: 20px 35px;
 			background: var(--green);
 			border-radius: 14px;
 			cursor: pointer;
 			border: none;
-			border: 1px solid transparent;
+			border: 1px solid transparent;	
+			color: var(--color-black);
 
 			@include hover {
 				background-color: transparent;

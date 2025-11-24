@@ -1,0 +1,101 @@
+.services {
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(40, 30);
+
+		@include tablet {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__card {
+		box-shadow: 0 5px 0 0 var(--dark);
+		background-color: var(--grey);
+		border-radius: 45px;
+		border: 1px solid var(--dark);
+		padding: 50px;
+		display: flex;
+		justify-content: space-between;
+		max-width: 600px;
+		min-height: 310px;
+		flex-wrap: wrap;
+		row-gap: 16px;
+
+		&-title {
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			align-items: start;
+		}
+
+		&-link {
+			font-size: 20px;
+			display: inline-flex;
+			align-items: center;
+			column-gap: 15px;
+			margin-top: auto;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				background: url('../../assets/icon/arrow.svg') center/cover no-repeat;
+				width: 41px;
+				height: 41px;
+				border-radius: 50%;
+			}
+
+			@include hover {
+				text-shadow: 0px 0px 4px var(--color-black);
+			}
+
+			@include tablet {
+				font-size: 0;
+			}
+		}
+
+		&-image {
+			object-fit: contain;
+			width: fluid(210, 165);
+
+			@include tablet {
+				margin-top: auto;
+			}
+		}
+
+		&--green {
+			background-color: var(--green);
+			.services__card-link {
+				@include hover {
+					color: var(--grey);
+				}
+			}
+		}
+
+		&--black {
+			background-color: var(--color-black);
+
+			.services__card-link {
+				color: var(--color-white);
+
+				&::before {
+					filter: grayscale(1) invert(1);
+				}
+
+				@include hover {
+					color: var(--green);
+				}
+			}
+		}
+
+		@include tablet {
+			max-width: 100%;
+		}
+	}
+
+	&__label {
+		display: flex;
+		flex-direction: column;
+		row-gap: 16px;
+	}
+}

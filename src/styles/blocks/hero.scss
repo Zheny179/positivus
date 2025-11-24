@@ -1,0 +1,89 @@
+.hero {
+	:focus-visible {
+		@include focus-visible;
+		outline: 2px dashed var(--color-black);
+	}
+
+	&__inner {
+	}
+
+	&__top {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		margin-bottom: fluid(70, 60);
+		column-gap: 16px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		max-width: 531px;
+	}
+
+	&__title {
+		margin: 0;
+		margin-bottom: fluid(35, 10);
+	}
+
+	&__desc {
+		max-width: 498px;
+		margin: 0;
+		font-size: 20px;
+		margin-bottom: 35px;
+	}
+
+	&__bg {
+		width: fluid(600, 361);
+		margin-inline: auto;
+	}
+
+	&__btn {
+		@include mobile {
+			width: 100%;
+		}
+	}
+
+	&__sponsors {
+		overflow: hidden;
+		&-list {
+			margin: 0;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			list-style: none;
+			gap: 37px;
+
+			@include mobile {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+
+		&-item {
+			transition-duration: var(--transition-duration);
+			filter: sepia(1) grayscale(1);
+			animation: scrollItems 12s linear 1s infinite;
+
+			@include hover {
+				filter: sepia(0) grayscale(0);
+			}
+
+			@include mobile-s {
+				&:nth-last-child(-n + 3) {
+					animation-direction: reverse;
+				}
+			}
+		}
+	}
+}
+
+@keyframes scrollItems {
+	from {
+		transform: translateX(-100vw);
+	}
+
+	to {
+		transform: translateX(100vw);
+	}
+}

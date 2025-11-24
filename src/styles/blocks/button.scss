@@ -1,0 +1,27 @@
+.btn {
+	font-size: 20px;
+	line-height: 140%;
+	padding: 20px 35px;
+	background-color: var(--dark);
+	border-radius: var(--border-radius-s);
+	color: var(--color-white);
+	border: none;
+	cursor: pointer;
+	border: 1px solid transparent;
+	user-select: none;
+	
+	@include hover {
+		background-color: var(--green);
+		border: var(--border);
+		color: var(--color-black);
+	}
+
+	&:active {
+		scale: 1.02;
+	}
+
+	&--transparent {
+		background-color: transparent;
+		border: var(--border);
+	}
+}

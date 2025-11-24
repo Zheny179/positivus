@@ -1,5 +1,10 @@
 .header {
-	padding: fluid(60, 30) 0 fluid(70, 40);
+	:focus-visible {
+		@include focus-visible;
+		outline: 2px dashed var(--color-black);
+	}
+	
+	padding-top: fluid(60, 30);
 
 	&__inner {
 		display: flex;
@@ -64,23 +69,10 @@
 	}
 
 	&__action {
-		border: var(--border);
-		background-color: transparent;
-		padding: 20px 35px;
-		line-height: 1.4;
-		border-radius: var(--border-radius-s);
-		cursor: pointer;
-
-		@include hover {
-			background-color: var(--green);
-		}
+		color: var(--color-black);
 
 		@include tablet {
 			display: none;
-		}
-
-		&:active {
-			scale: 1.02;
 		}
 	}
 

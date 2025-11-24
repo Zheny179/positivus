@@ -24,7 +24,7 @@
 	--container-width: #{$container-desktop-width}px;
 	--container-padding-x: 16px;
 
-	--section-padding-y: #{fluid(140, 60)};
+	--section-padding-y: calc(#{fluid(140, 60)} / 2);
 
 	--transition-duration: 0.2s;
 	--transition-duration-longer: 0.4s;
