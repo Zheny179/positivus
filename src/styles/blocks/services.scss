@@ -3,6 +3,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: fluid(40, 30);
+		margin-bottom: 100px;
 
 		@include tablet {
 			grid-template-columns: 1fr;
@@ -97,5 +98,46 @@
 		display: flex;
 		flex-direction: column;
 		row-gap: 16px;
+	}
+
+	&__cta {
+		padding-bottom: 23.5px;
+
+		&-inner {
+			display: flex;
+			align-items: center;
+			background-color: var(--grey);
+			border-radius: 45px;
+			justify-content: space-between;
+		}
+
+		&-content {
+			padding: 60px 0 60px 60px;
+			max-width: 530px;
+			display: grid;
+			row-gap: 26px;
+			justify-items: start;
+
+			@include tablet-s {
+				justify-items: stretch;
+				padding: 50px;
+			}
+		}
+
+		&-title {
+			margin: 0;
+		}
+
+		&-desc {
+			margin: 0;
+		}
+
+		&-image {
+			margin-block: -15px;
+
+			@include tablet-s {
+				display: none;
+			}
+		}
 	}
 }

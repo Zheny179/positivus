@@ -18,14 +18,16 @@
 		padding-inline: 7px;
 		background: var(--green);
 		margin: 0;
+		@include tablet {
+			text-align: center;
+		}
 	}
 
 	&__desc {
 		margin: 0;
 		max-width: 580px;
-	}
-
-	@include tablet {
-		text-align: center;
+		@include tablet {
+			text-align: center;
+		}
 	}
 }
