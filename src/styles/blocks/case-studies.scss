@@ -1,0 +1,79 @@
+.case-studies {
+	&__cards {
+		background-color: var(--dark);
+		border-radius: 45px;
+		padding: 70px 60px 93px;
+		display: flex;
+		justify-content: space-between;
+		column-gap: 64px;
+		overflow-y: auto;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+
+		@include tablet {
+			padding: 0;
+			background-color: transparent;
+			display: grid;
+			grid-template-columns: repeat(3, 350px);
+			border-radius: 0;
+			padding-inline: 70px;
+		}
+	}
+
+	&__card {
+		display: grid;
+		row-gap: 20px;
+		max-width: 286px;
+		position: relative;
+
+		&:not(:last-child)::after {
+			content: '';
+			position: absolute;
+			height: 186px;
+			width: 1px;
+			background-color: var(--color-white);
+			right: -4vw;
+
+			@include tablet {
+				@include hide;
+			}
+		}
+
+		&-desc {
+			margin: 0;
+			color: var(--color-white);
+		}
+
+		&-link {
+			color: var(--green);
+			display: flex;
+			align-items: center;
+			column-gap: 15px;
+
+			&::after {
+				content: '';
+				inset: 0;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+			}
+
+			@include hover {
+				color: var(--color-white);
+
+				svg * {
+					fill: currentColor;
+				}
+			}
+		}
+
+		@include tablet {
+			padding: 42px 50px;
+			max-width: 100%;
+			border-radius: 45px;
+			background-color: var(--dark);
+			scroll-snap-align: start;
+			scroll-snap-stop: always;
+		}
+	}
+}
