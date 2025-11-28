@@ -1,6 +1,9 @@
 html {
 	box-sizing: border-box;
-	height: 100vh;
+	height: 100%;
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+
 	&.is-lock {
 		overflow: hidden;
 	}
@@ -21,6 +24,7 @@ body {
 	color: var(--color-black);
 	background-color: var(--color-white);
 	min-height: 100%;
+	line-height: 1.5;
 }
 
 main {
@@ -63,6 +67,10 @@ h4,
 	@include fluid-text(20, 18);
 }
 
+:where(p[class]) {
+	margin-block: 0;
+}
+
 a,
 button,
 label,
@@ -83,6 +91,19 @@ a {
 	&[class] {
 		text-decoration: none;
 	}
+
+	&:where([class]) {
+		display: inline-flex;
+	}
+}
+
+button,
+label {
+	cursor: pointer;
+}
+
+button {
+	-webkit-tap-highlight-color: transparent;
 }
 
 :focus-visible {
@@ -93,4 +114,27 @@ img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+
+:where([stroke]:not([stroke='none'], [stroke^='url'])) {
+	stroke: currentColor;
+}
+
+:where([fill]:not([fill='none'], [fill^='url'])) {
+	fill: currentColor;
+}
+
+svg * {
+	transition-property: fill, stroke;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }

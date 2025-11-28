@@ -1,4 +1,8 @@
 .case-studies {
+	.section__header {
+		padding-right: var(--container-padding-x);
+	}
+
 	&__cards {
 		background-color: var(--dark);
 		border-radius: 45px;

@@ -1,0 +1,34 @@
+.our-working-process {
+	.section__desc {
+		max-width: 292px;
+	}
+
+	&__list {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		counter-reset: custom-counter;
+		row-gap: 30px;
+	}
+
+	&__item {
+		counter-increment: custom-counter;
+		display: flex;
+		align-items: center;
+		background-color: var(--grey);
+		border-radius: 45px;
+		padding: 41px 60px;
+		box-shadow: 0 5px 0 0 var(--dark);
+		border: 1px solid var(--dark);
+
+		@include tablet-s {
+			padding: 30px;
+		}
+	}
+
+	&__item:has(.accordion__details[open]) {
+		background-color: var(--green);
+	}
+}
