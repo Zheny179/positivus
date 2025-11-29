@@ -1,4 +1,4 @@
 import '@/styles'
-import OverlayMenu from './module/OverlayMenu'
+import OverlayMenu from '@/module/OverlayMenu'
 
 new OverlayMenu()

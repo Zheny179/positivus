@@ -433,13 +433,12 @@
                 </button>
               </div>
               <img
-                loading="lazy"
                 class="services__cta-image"
+                loading="lazy"
                 src="./src/assets/img/services/cta-bg.png"
                 alt=""
                 width="494"
                 height="395"
-                loading="lazy"
               />
             </div>
           </div>
@@ -781,13 +780,14 @@
               <article class="our-team__card">
                 <header class="our-team__card-header">
                   <img
+                    class="our-team__card-image"
                     loading="lazy"
                     src="./src/assets/img/our-team/1.svg"
                     alt=""
-                    class="our-team__card-image"
                     width="106"
                     height="103"
                   />
+                  
                   <div class="our-team__card-label">
                     <h3 class="our-team__card-caption h4">John Smith</h3>
                     <p class="our-team__card-slogan">CEO and Founder</p>
@@ -992,9 +992,128 @@
         </div>
       </div>
     </section>
+    <section
+      class="section contact-us"
+      aria-labelledby="contact-us"
+    >
+      <div class="container">
+        <header class="section__header">
+          <h2
+            class="section__title"
+            id="contact-us-title"
+          >
+            Contact Us
+          </h2>
+          <p class="section__desc">
+            Connect with Us: Let's Discuss Your Digital Marketing Needs
+          </p>
+        </header>
+        <div class="section__body">
+          <div class="contact-us__inner">
+            <form
+              action="#"
+              method="post"
+              class="contact-us__form"
+            >
+              <div class="contact-us__form-wrap">
+                <div class="contact-us__form-top">
+                  <label
+                    class="contact-us__form-label contact-us__form-label--radio"
+                  >
+                    <input
+                      type="radio"
+                      name="check"
+                      class="contact-us__form-input contact-us__form-input--radio"
+                      checked
+                    />
+                    <span class="contact-us__form-check"></span>
+                    Say Hi
+                  </label>
+                  <label
+                    class="contact-us__form-label contact-us__form-label--radio"
+                  >
+                    <input
+                      type="radio"
+                      name="check"
+                      class="contact-us__form-input contact-us__form-input--radio"
+                    />
+                    <span class="contact-us__form-check"></span>
+                    
+                    Get a Quote
+                  </label>
+                </div>
+                
+                <div class="contact-us__form-body">
+                  <label
+                    class="contact-us__form-label"
+                    title="Enter Name"
+                  >
+                    Name
+                    <input
+                      placeholder="Name"
+                      type="text"
+                      class="contact-us__form-input"
+                      name="user-name"
+                    />
+                  </label>
+                  
+                  <label
+                    class="contact-us__form-label"
+                    title="Enter Email"
+                  >
+											<span
+                        class="contact-us__form-label-text contact-us__form-label-text--required"
+                      >Email</span
+                      >
+                    <input
+                      class="contact-us__form-input"
+                      placeholder="Email"
+                      type="email"
+                      name="user-email"
+                      required
+                    />
+                  </label>
+                  
+                  <label
+                    title="Enter Message"
+                    class="contact-us__form-label contact-us__form-label--required"
+                  >
+											<span
+                        class="contact-us__form-label-text contact-us__form-label-text--required"
+                      >Message</span
+                      >
+                    <textarea
+                      placeholder="Message"
+                      name="user-message"
+                      class="contact-us__form-textarea"
+                      required
+                    ></textarea>
+                  </label>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn contact-us__link"
+              >
+                Send Message
+              </button>
+            </form>
+            <img
+              class="contact-us__image"
+              src="./src/assets/img/contact-us/bg.svg"
+              alt=""
+              loading="lazy"
+              width="692"
+              height="649"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container footer__inner">
+      <h2 class="visually-hidden">Footer</h2>
       <div class="footer__top">
         <a
           href="#"
@@ -1188,7 +1307,7 @@
       </div>
       <div class="footer__body">
         <div class="footer__info">
-          <h2 class="footer__title h4">Contact us:</h2>
+          <h3 class="footer__title h4">Contact us:</h3>
           <ul class="footer__info-list">
             <li class="footer__info-item">
               <p class="footer__info-value">

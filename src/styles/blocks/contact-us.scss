@@ -1,0 +1,156 @@
+.contact-us {
+	.section__desc {
+		max-width: 323px;
+	}
+
+	&__inner {
+		display: flex;
+		background-color: var(--grey);
+		border-radius: 45px;
+		overflow: hidden;
+		position: relative;
+		align-items: center;
+
+		@include tablet {
+			justify-content: center;
+			overflow: visible;
+		}
+
+		@include mobile {
+			background-color: transparent;
+			overflow: visible;
+		}
+	}
+
+	&__form {
+		background-color: var(--grey);
+		display: flex;
+		flex-direction: column;
+		padding: 60px 0 80px 100px;
+		border-radius: 45px;
+		max-width: 656px;
+		width: 100%;
+
+		&-wrap {
+			display: flex;
+			flex-direction: column;
+			row-gap: 40px;
+
+			@include mobile {
+				border-radius: 45px;
+				background-color: var(--grey);
+				padding: 40px 30px;
+
+				margin-bottom: 30px;
+			}
+		}
+
+		&-check {
+			display: inline-flex;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 28px;
+				height: 28px;
+				// position: absolute;
+				left: 0;
+				bottom: 0;
+				border: var(--border);
+				border-radius: 50%;
+				background-color: var(--color-white);
+			}
+			&::after {
+				content: '';
+				display: inline-block;
+				@include square(16px);
+				border-radius: 50%;
+				background-color: var(--green);
+				opacity: 0;
+				transition-duration: var(--transition-duration-longer);
+
+				@include abs-center;
+			}
+			.contact-us__form-input--radio:checked + &::after {
+				opacity: 1;
+			}
+		}
+
+		&-top {
+			display: flex;
+			column-gap: 35px;
+		}
+
+		&-body {
+			display: flex;
+			flex-direction: column;
+			row-gap: 25px;
+			margin-bottom: 40px;
+
+			@include mobile {
+				margin: 0;
+			}
+		}
+
+		&-label {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			row-gap: 5px;
+			font-size: fluid(16, 14);
+
+			&--radio {
+				position: relative;
+				flex-direction: row;
+				column-gap: 14px;
+				align-items: center;
+			}
+
+			&-text {
+				&--required {
+					&::after {
+						content: '*';
+						display: inline-flex;
+						align-items: start;
+					}
+				}
+			}
+		}
+
+		&-input {
+			&[type='radio'] {
+				display: none;
+			}
+		}
+
+		&-input,
+		&-textarea {
+			border-radius: 14px;
+			padding-block: 18px;
+			padding-inline: fluid(30, 20);
+			border: var(--border);
+			width: 100%;
+		}
+
+		@include tablet {
+			justify-content: center;
+			padding: 40px 50px;
+		}
+
+		@include mobile {
+			background-color: transparent;
+			padding: 0;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		right: 0;
+		translate: 50%;
+
+		@include tablet {
+			display: none;
+		}
+	}
+}
