@@ -1,0 +1,41 @@
+.slider {
+  width: 100%;
+  height: 100%;
+  margin-bottom: fluid(124, 60);
+  
+  &__inner {
+    display: grid;
+    justify-content: center;
+    row-gap: 40px;
+  }
+  
+  &__button-prev,
+  &__button-next {
+    color: var(--color-white);
+    width: 23px;
+    height: 23px;
+    z-index: 3;
+    cursor: pointer;
+    
+    transition-duration: var(--transition-duration);
+  }
+  
+  
+  &__disabled {
+    opacity: 0.5;
+  }
+  
+  &__pagination {
+    display: flex;
+    column-gap: 20px;
+  }
+  
+  &__pagination-bullet {
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+    
+    &--active {
+      color: var(--green);
+    }
+  }
+}
