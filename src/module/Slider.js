@@ -10,11 +10,16 @@ class Slider {
   init() {
     new Swiper('.swiper', {
       modules: [Navigation, Pagination],
+      centeredSlides: true,
+      spaceBetween: 20,
+      grabCursor: true,
+
       pagination: {
         el: '.slider__pagination',
         bulletActiveClass: 'slider__pagination-bullet--active',
         bulletClass: 'slider__pagination-bullet',
         clickable: true,
+        type: 'bullets',
         renderBullet: function (index, className) {
           const svgIcon = `
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +27,14 @@ class Slider {
             </svg>
           `
 
-          return '<span class="' + className + '">' + svgIcon + '</span>'
+          return `
+                  <span 
+                    class="${ className }" 
+                    aria-label="Go to slide ${ index + 1 }"
+                  >
+                    ${ svgIcon }
+                  </span>
+          `
         }
       },
 
@@ -32,10 +44,6 @@ class Slider {
         addIcons: false,
         disabledClass: 'slider__disabled',
       },
-
-      centeredSlides: true,
-      spaceBetween: 20,
-      grabCursor: true,
 
       breakpoints: {
         1024: {

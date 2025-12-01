@@ -1,11 +1,12 @@
-// vite.config.js
 import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: './',
+  root: '',
 	resolve: {
 		alias: {
-			'@/': path.resolve(__dirname, 'src') + '/',
+			'@': path.resolve(__dirname, './src'),
 		},
 	},
 	css: {

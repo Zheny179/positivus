@@ -1,31 +1,29 @@
 :root {
-	--color-white: #ffffff;
-	--color-black: #000000;
-
-	--green: #b9ff66;
-	--grey: #f3f3f3;
-	--dark: #191a23;
-
-	--border: var(--border-width-s) solid var(--dark);
-
-	--border-width-l: 4px;
-	--border-width-m: 3px;
-	--border-width-s: 1px;
-
-	--border-radius-l: 18px;
-	--border-radius-m: 16px;
-	--border-radius-s: 14px;
-	--border-radius-xs: 10px;
-	--border-radius-xxs: 8px;
-	--border-radius-xxxs: 5px;
-
-	--font-family-base: 'space-grotesk', sans-serif;
-
-	--container-width: #{$container-desktop-width}px;
-	--container-padding-x: 16px;
-
-	--section-padding-y: calc(#{fluid(140, 60)} / 2);
-
-	--transition-duration: 0.2s;
-	--transition-duration-longer: 0.4s;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-green: #b9ff66;
+  --color-grey: #f3f3f3;
+  --color-dark: #191a23;
+  
+  --border: var(--border-width-s) solid var(--color-dark);
+  
+  --border-width-l: 4px;
+  --border-width-m: 3px;
+  --border-width-s: 1px;
+  
+  --border-radius-l: 45px;
+  --border-radius-m: 18px;
+  --border-radius-s: 14px;
+  --border-radius-xs: 10px;
+  --border-radius-xxs: 7px;
+  
+  --font-family-base: 'space-grotesk', sans-serif;
+  
+  --container-width: #{$container-desktop-width}px;
+  --container-padding-x: 16px;
+  
+  --section-padding-y: calc(#{fluid(140, 60)} / 2);
+  
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
 }

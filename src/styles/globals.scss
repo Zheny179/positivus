@@ -31,6 +31,23 @@ main {
   flex-grow: 1;
 }
 
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+:where(fieldset[class]) {
+  padding: 0;
+  border: none;
+}
+
 :where(
   h1,
   h2,
@@ -41,8 +58,19 @@ main {
   p,
   ul,
   ol,
-  dl):where([class]) {
+  dl
+):where([class]) {
   margin-block: 0;
+}
+
+p {
+  --descMarginBottom: 24px;
+  
+  margin-block: 0;
+}
+
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--descMarginBottom);
 }
 
 h1,
@@ -95,7 +123,7 @@ a {
   color: inherit;
   
   @include hover {
-    color: var(--green);
+    color: var(--color-green);
   }
   
   &[class] {
@@ -120,10 +148,27 @@ button {
   @include focus-visible;
 }
 
-img {
+img,
+video {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 :where([stroke]:not([stroke='none'], [stroke^='url'])) {

@@ -1,9 +1,9 @@
 .mark {
-	border-radius: 7px;
-	background-color: var(--green);
-	padding-inline: 7px;
-
-	&--white {
-		background-color: var(--color-white);
-	}
+  border-radius: var(--border-radius-xxs);
+  background-color: var(--color-green);
+  padding-inline: 7px;
+  
+  &--white {
+    background-color: var(--color-white);
+  }
 }

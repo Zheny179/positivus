@@ -11,15 +11,13 @@
   
   &__button-prev,
   &__button-next {
+    @include square(23px);
+    
     color: var(--color-white);
-    width: 23px;
-    height: 23px;
     z-index: 3;
     cursor: pointer;
-    
     transition-duration: var(--transition-duration);
   }
-  
   
   &__disabled {
     opacity: 0.5;
@@ -35,7 +33,7 @@
     transition-duration: var(--transition-duration);
     
     &--active {
-      color: var(--green);
+      color: var(--color-green);
     }
   }
 }

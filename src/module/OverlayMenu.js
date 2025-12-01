@@ -21,6 +21,8 @@ class OverlayMenu {
 
   onBurgerButtonClick = () => {
     this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
+    const isOpen = this.dialogElement.open
+    this.burgerButtonElement.setAttribute('aria-expanded', String(!isOpen))
     this.dialogElement.open = !this.dialogElement.open
     document.documentElement.classList.toggle(this.stateClasses.isLock)
   }

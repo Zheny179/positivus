@@ -1,9 +1,8 @@
 .testimonials {
-  
   &__inner {
-    background-color: var(--dark);
+    background-color: var(--color-dark);
     padding: fluid(84, 30) 0 68px;
-    border-radius: 45px;
+    border-radius: var(--border-radius-l);
     color: white;
     
     @include tablet {
@@ -23,8 +22,8 @@
     padding: 48px 52px 51px;
     position: relative;
     border: var(--border);
-    border-radius: 45px;
-    border-color: var(--green);
+    border-radius: var(--border-radius-l);
+    border-color: var(--color-green);
     user-select: none;
     
     &::after {
@@ -32,7 +31,7 @@
       
       content: '';
       border: inherit;
-      background-color: var(--dark);
+      background-color: var(--color-dark);
       rotate: 45deg;
       position: absolute;
       top: 100%;
@@ -54,6 +53,6 @@
   }
   
   &__name {
-    color: var(--green);
+    color: var(--color-green);
   }
 }
